@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "postinstall": "./run.sh postinstall",
-    "watch": "sudo ./run.sh watch",
+    "watch": "./run.sh watch",
     "build": "./run.sh build",
     "build:php": "./run.sh build:php",
     "build:video": "./run.sh build:video"
@@ -29,6 +29,8 @@
     "postcss-easy-import": "^1.0.1",
     "postcss-hash": "^0.2.1",
     "postcss-reporter": "latest",
+    "postcss-uncss": "^0.16.1",
+    "uncss": "^0.16.1",
     "simplifyify": "^4.0.0",
     "stylelint": "^7.8.0",
     "stylelint-config-lost": "^0.0.2",
@@ -38,9 +40,5 @@
     "svgo": "^0.7.2",
     "uglify-js": "^3.0.24",
     "watchify": "^3.7.0"
-  },
-  "dependencies": {
-    "postcss-uncss": "^0.16.1",
-    "uncss": "^0.16.1"
   }
 }

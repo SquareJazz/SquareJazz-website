@@ -14,24 +14,22 @@ module.exports = {
       }
     }),
     require('lost'),
-    require('postcss-uncss')({
+    require('uncss').postcssPlugin({
       html: [
         "./www/index.html"
-      ],
-      ignore: [
-
       ]
     }),
-    require('postcss-reporter')({
-      clearReportedMessages: true
-    }),
     require('cssnano')({
-      zindex: false
+      zindex: false,
+      autoprefixer: false
     }),
     require('postcss-hash')({
       algorithm: 'sha256',
       trim: 20,
       manifest: './src/php/busters.json'
     }),
+    require('postcss-reporter')({
+      clearReportedMessages: true
+    })
   ]
 }

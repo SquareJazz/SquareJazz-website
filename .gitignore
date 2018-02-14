@@ -18,5 +18,7 @@ Thumbs.db
 
 www
 www/*
+src/php/busters.json
 
 .env
+/src/php/busters.json
