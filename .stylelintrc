@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-lost"
+  ],
+  "rules": {
+    "length-zero-no-unit": null
+  }
+}

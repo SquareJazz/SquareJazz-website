@@ -1,0 +1,27 @@
+/*
+// Lists
+*/
+
+ul,
+ol {
+  margin: var(--space) 0;
+
+  & li {
+    margin-bottom: 5px;
+  }
+}
+
+/* Definition Lists */
+dl {
+  overflow: hidden;
+  margin: 0 0 var(--space);
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+  margin-bottom: var(--space);
+}

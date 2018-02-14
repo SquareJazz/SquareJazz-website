@@ -1,0 +1,13 @@
+.section {
+  & .section__wrap {
+    margin: 6rem auto;
+  }
+}
+
+@media (--mobile) {
+  .section {
+    & .section__wrap {
+      margin: 6rem auto;
+    }
+  }
+}

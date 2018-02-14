@@ -1,0 +1,46 @@
+{
+  "name": "squarejazz",
+  "version": "1.0.0",
+  "description": "SquareJazz Solutions",
+  "author": "Chris Saggerson",
+  "private": true,
+  "scripts": {
+    "postinstall": "./run.sh postinstall",
+    "watch": "sudo ./run.sh watch",
+    "build": "./run.sh build",
+    "build:php": "./run.sh build:php",
+    "build:video": "./run.sh build:video"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.17.5",
+    "browserify": "^13.1.0",
+    "cssnano-cli": "^1.0.5",
+    "imagemin-cli": "^3.0.0",
+    "imagemin-mozjpeg": "^6.0.0",
+    "imagemin-webp": "^4.0.0",
+    "in-view": "^0.6.1",
+    "jshint": "^2.9.3",
+    "jshint-stylish": "^2.2.1",
+    "lost": "^8.1.0",
+    "node-notifier": "^4.6.1",
+    "onchange": "^3.2.1",
+    "postcss-cli": "^4.1.0",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-easy-import": "^1.0.1",
+    "postcss-hash": "^0.2.1",
+    "postcss-reporter": "latest",
+    "simplifyify": "^4.0.0",
+    "stylelint": "^7.8.0",
+    "stylelint-config-lost": "^0.0.2",
+    "stylelint-config-standard": "^16.0.0",
+    "svg-sprite": "^1.3.7",
+    "svg4everybody": "^2.1.8",
+    "svgo": "^0.7.2",
+    "uglify-js": "^3.0.24",
+    "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "postcss-uncss": "^0.16.1",
+    "uncss": "^0.16.1"
+  }
+}

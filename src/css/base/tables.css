@@ -1,0 +1,42 @@
+/*
+// Tables
+*/
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 0;
+  width: 100%;
+}
+
+th {
+  text-align: left;
+}
+
+.table {
+  & thead {
+    border-bottom: 1px solid #000;
+  }
+
+  & th {
+    line-height: 1.2;
+    background-color: #fff;
+    border: 0;
+    padding: 1em;
+  }
+
+  & td {
+    padding: 1em;
+    line-height: 1.2;
+    color: #343536;
+    background-color: #fff;
+  }
+
+  tr:first-child td {
+    padding-top: 1.4em;
+  }
+
+  & a {
+    text-decoration: underline;
+  }
+}

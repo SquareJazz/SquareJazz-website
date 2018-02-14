@@ -1,0 +1,37 @@
+/*
+// Styles for general use
+*/
+
+/*
+// SETTINGS
+*/
+
+@import "base/grid";
+@import "base/vars";
+
+/*
+// OBJECTS & MODULES
+*/
+
+@import "vendor/normalize";
+@import "base/lists";
+@import "base/forms";
+@import "base/tables";
+@import "base/print";
+@import "base/misc";
+@import "base/defaults";
+@import "base/media";
+@import "base/utilities";
+@import "base/animations";
+@import "base/buttons";
+@import "base/typography";
+@import "base/icons";
+@import "/svg/symbol/sprite.css";
+
+/*
+// PARTIALS
+*/
+
+@import "partials/section";
+@import "partials/header";
+@import "partials/contact";

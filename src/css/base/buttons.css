@@ -1,0 +1,46 @@
+/*
+// Buttons
+*/
+
+:root {
+  --button-padding: 1.25em 1em;
+  --button-speed: 250ms;
+  --button-easing: cubic-bezier(0.19, 1, 0.22, 1);
+  --button-delay: 50ms;
+  --button-font-size: 1.7rem;
+}
+
+.btn-wrap {
+  width: 100%;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: var(--button-padding);
+  background: hsl(300, 8%, 85%);
+  color: currentColor;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  border: 0;
+  outline-width: 0;
+  user-select: none;
+  font-family: var(--font);
+  font-size: var(--button-font-size);
+  line-height: 1;
+  text-align: center;
+  font-weight: bold;
+  will-change: background;
+  cursor: pointer;
+  outline: 0;
+
+  &:focus {
+    outline-width: 10px;
+  }
+
+  &.is-disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}

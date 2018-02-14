@@ -1,0 +1,27 @@
+/*
+// Icons
+*/
+
+/* Default social icon styles */
+[class^="svg-animate"] use,
+[class*=" svg-animate"] use {
+  /*
+  transition:fill var(--button-transition) var(--button-timing);
+  */
+}
+
+.svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+}
+
+.icon-wrap {
+  text-align: center;
+  width: 100%;
+
+  & svg {
+    display: inline-block;
+  }
+}

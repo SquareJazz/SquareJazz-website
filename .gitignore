@@ -1,0 +1,22 @@
+bower_components
+node_modules
+*.log
+.sass-cache
+.composer
+
+.wp-init
+
+.Spotlight-V100
+.Trashes
+.DS_Store
+.DS_Store?
+ehthumbs.db
+Thumbs.db
+
+# Vagrant
+.vagrant
+
+www
+www/*
+
+.env
