@@ -44,7 +44,7 @@ body {
   lost-center: var(--container-width) var(--container-padding);
 
   @media (--below-desktop) {
-    lost-center: 100% 15%;
+    lost-center: 100% 5%;
   }
 }
 
