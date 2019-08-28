@@ -15,7 +15,7 @@ function postinstall(){
 }
 
 function watch(){
-  browser-sync start \
+  npx browser-sync start \
   --files "$static/css/**.css, $static/js/**.js, $webroot/*.html" \
   --host $host \
   --server \
@@ -51,37 +51,37 @@ function build:php(){
 
 function watch:php(){
   echo "PHP updated" \
-  & onchange -i "$src/php/**.php" \
+  & npx onchange -i "$src/php/**.php" \
   -- npm run build:php
 }
 
 function watch:js(){
-  simplifyify $src/js/*.js \
+  npx simplifyify $src/js/*.js \
   --outfile $static/js/*.js \
   --debug \
   --watch
 }
 
 function build:js(){
-  simplifyify $src/js/*.js \
+  npx simplifyify $src/js/*.js \
   --outfile $static/js/*.js \
   --minify
 }
 
 function watch:css(){
-  postcss $src/css/*.css \
+  npx postcss $src/css/*.css \
   --dir "$static/css/" \
   --watch
 }
 
 function build:css(){
-  postcss $src/css/*.css \
+  npx postcss $src/css/*.css \
   --dir "$static/css/" \
   --no-map
 }
 
 function watch:svg(){
-  onchange "$src/svg/**/**.svg" \
+  npx onchange "$src/svg/**/**.svg" \
   -- build:svg:sprite & build:svg:inline
 }
 
@@ -91,7 +91,7 @@ function build:svg(){
 }
 
 function build:svg:sprite(){
-  svg-sprite "$src/svg/sprite/**.svg" \
+  npx svg-sprite "$src/svg/sprite/**.svg" \
   --dest $static/svg \
   --symbol \
   --symbol-dimensions="--d" \
@@ -100,13 +100,13 @@ function build:svg:sprite(){
 }
 
 function build:svg:inline(){
-  svgo -f "$src/svg/inline" \
+  npx svgo -f "$src/svg/inline" \
   --disable=removeUnknownsAndDefaults \
   -o $static/svg/inline
 }
 
 function watch:images(){
-  onchange "$src/image/**.**" \
+  npx onchange "$src/image/**.**" \
   -- build:images
 }
 
@@ -117,19 +117,19 @@ function build:images(){
 }
 
 function build:images:jpeg(){
-  imagemin "$src/image/*.jpg" \
+  npx imagemin "$src/image/*.jpg" \
   --plugin=mozjpeg \
   -o $static/image/
 }
 
 function build:images:webp(){
-  imagemin "$src/image/*.jpg" \
+  npx imagemin "$src/image/*.jpg" \
   --plugin=webp \
   -o $static/image/
 }
 
 function build:images:png(){
-  imagemin "$src/image/*.png" \
+  npx imagemin "$src/image/*.png" \
   -o $static/image/
 }
 
@@ -139,8 +139,8 @@ function build:video(){
 }
 
 function build:video:webm(){
-  for i in $src/video/*.mov; 
-    do 
+  for i in $src/video/*.mov;
+    do
       ffmpeg -i "$i" \
       -c:v libvpx \
       -y \
@@ -151,7 +151,7 @@ function build:video:webm(){
 
 function build:video:mp4(){
   for i in $src/video/*.mov;
-    do 
+    do
       ffmpeg -i "$i" \
       -c:v libx264 \
       -f mp4 \
@@ -162,14 +162,14 @@ function build:video:mp4(){
 }
 
 function build:video:images(){
-  for i in $src/video/*.mov; 
-    do 
+  for i in $src/video/*.mov;
+    do
       ffmpeg -i "$i" \
       -vf "select=eq(n\,0)" \
       -q:v 1 \
       -f image2pipe - \
         | imagemin \
-        --plugin=mozjpeg > "$static/video/$(basename ${i%.*}).jpg"; 
+        --plugin=mozjpeg > "$static/video/$(basename ${i%.*}).jpg";
     done
 }
 
