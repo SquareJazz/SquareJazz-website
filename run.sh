@@ -6,13 +6,13 @@ export PATH=./node_modules/.bin:$PATH
 # Get args from .env
 export $(egrep -v '^#' .env | xargs)
 
-function postinstall(){
+#function postinstall(){
   # Create directories
-  mkdir "$src/js" -p \
-  mkdir "$src/css" -p \
-  mkdir "$src/image" -p \
-  mkdir "$src/svg/inline" -p
-}
+  #mkdir "$/js" -p \
+  #mkdir "$/css" -p \
+  #mkdir "$/image" -p \
+  #mkdir "$/svg/inline" -p
+#}
 
 function watch(){
   npx browser-sync start \
