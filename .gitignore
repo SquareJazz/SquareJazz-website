@@ -16,8 +16,6 @@ Thumbs.db
 # Vagrant
 .vagrant
 
-www
-www/*
 src/php/busters.json
 
 .env
