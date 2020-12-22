@@ -21,7 +21,7 @@
     "jshint": "^2.9.3",
     "jshint-stylish": "^2.2.1",
     "lost": "^8.1.0",
-    "node-notifier": "^4.6.1",
+    "node-notifier": "^8.0.1",
     "onchange": "^3.2.1",
     "postcss-cli": "^4.1.0",
     "postcss-cssnext": "^3.0.2",
